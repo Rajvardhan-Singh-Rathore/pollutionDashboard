@@ -8,10 +8,14 @@ import nodemailer from "nodemailer";
 
 dotenv.config();
 const app = express();
+
+const allowed = [
+  "http://localhost:5173",
+  "https://pollution-dashboard-azure.vercel.app"
+];
+
 app.use(cors({
-  origin: "https://pollution-dashboard-azure.vercel.app",
-  methods: ["GET","POST"],
-  allowedHeaders: ["Content-Type","token"],
+  origin: allowed,
   credentials: true
 }));
 
