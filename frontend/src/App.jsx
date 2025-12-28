@@ -1,4 +1,5 @@
 import {useState,useEffect,useMemo} from "react";
+const API = import.meta.env.VITE_API || "http://localhost:5000";
 import axios from "axios";
 import "./glass.css";
 import {Line} from "react-chartjs-2";
