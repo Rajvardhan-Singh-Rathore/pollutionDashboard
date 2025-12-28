@@ -90,7 +90,7 @@ function Dashboard({token,setToken}){
 
   const [form,setForm]=useState({wardNo:"",ward:"",pm25:"",pm10:"",no2:"",date:""});
 
-  const load=async()=>setData((await axios.get("http://localhost:5000/api/readings")).data);
+  const load=async()=>setData((await axios.get(`${import.meta.env.VITE_API}/api/readings`)).data);
   useEffect(()=>{load();},[]);
 
   const submit=async e=>{
