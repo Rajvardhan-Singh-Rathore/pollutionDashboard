@@ -1,0 +1,25 @@
+const delhiWards = [
+  { no:1, name:"Narela", lat:28.852, lng:77.092 },
+  { no:2, name:"Bankner", lat:28.835, lng:77.086 },
+  { no:3, name:"Holambi Kalan", lat:28.812, lng:77.073 },
+  { no:4, name:"Alipur", lat:28.807, lng:77.147 },
+  { no:5, name:"Bakhtawarpur", lat:28.799, lng:77.205 },
+  { no:6, name:"Burari", lat:28.745, lng:77.19 },
+  { no:7, name:"Kadipur", lat:28.76, lng:77.17 },
+  { no:8, name:"Mukundpur", lat:28.71, lng:77.17 },
+  { no:9, name:"Sant Nagar", lat:28.70, lng:77.20 },
+  { no:10, name:"Jharoda", lat:28.73, lng:77.21 },
+
+  { no:115, name:"Najafgarh", lat:28.61, lng:76.98 },
+  { no:136, name:"Rohini", lat:28.72, lng:77.12 },
+  { no:153, name:"Aya Nagar", lat:28.48, lng:77.14 },
+  { no:159, name:"Dwarka", lat:28.58, lng:77.05 },
+  { no:174, name:"Lodhi Road", lat:28.59, lng:77.23 },
+  { no:198, name:"Dilshad Garden", lat:28.68, lng:77.32 },
+  { no:200, name:"Punjabi Bagh", lat:28.67, lng:77.12 },
+  { no:205, name:"RK Puram", lat:28.56, lng:77.17 },
+  { no:207, name:"Tughlakabad", lat:28.50, lng:77.26 },
+  { no:211, name:"Jahangirpuri", lat:28.72, lng:77.17 },
+  { no:241, name:"Anand Vihar", lat:28.65, lng:77.31 },
+];
+export default delhiWards;

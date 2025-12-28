@@ -1,0 +1,101 @@
+*{box-sizing:border-box;}
+body{margin:0;font-family:system-ui;background:#0e0e0e;color:white;}
+
+.bg{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:30px;
+  background:radial-gradient(circle at top,#161b22,#0e0e0e);
+}
+
+.glass{
+  width:95%;
+  max-width:1050px;
+  padding:28px;
+  border-radius:26px;
+  background:rgba(20,20,20,.65);
+  backdrop-filter:blur(18px) saturate(150%);
+  border:1px solid rgba(255,255,255,.1);
+  box-shadow:0 25px 60px rgba(0,0,0,.6);
+}
+.small{max-width:420px}
+
+/* subtle fade */
+.animate-fade{animation:fade .5s ease;}
+@keyframes fade{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+
+.filters{
+  display:flex;
+  gap:10px;
+  margin:10px 0 20px;
+  flex-wrap:wrap;
+}
+
+.filters input,.filters select{
+  padding:10px;
+  border-radius:12px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.2);
+  color:white;
+}
+
+button{
+  padding:10px 16px;
+  border-radius:14px;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.25);
+  color:white;
+  cursor:pointer;
+}
+
+.glass-form{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:10px;
+  margin:10px 0 25px;
+}
+
+.glass-form input{
+  padding:10px;
+  border-radius:12px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.2);
+  color:white;
+}
+
+.glass-form-2{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.glass-table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:15px;
+}
+.glass-table td,.glass-table th{
+  padding:10px;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+.link{cursor:pointer;}
+
+/* AQI colors (used via className if needed) */
+.Good{border-left:5px solid #4caf50;}
+.Satisfactory{border-left:5px solid #8bc34a;}
+.Moderate{border-left:5px solid #ffeb3b;}
+.Poor{border-left:5px solid #ff9800;}
+.Very{border-left:5px solid #ff5722;}
+.Severe{border-left:5px solid #f44336;}
+
+.filters select{
+  color:black;
+}
+.leaflet-container{
+  cursor: default;
+}
+.leaflet-interactive:hover{
+  filter: drop-shadow(0 0 6px rgba(255,255,255,.6));
+}
