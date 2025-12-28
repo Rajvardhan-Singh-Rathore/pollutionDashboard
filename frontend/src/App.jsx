@@ -17,7 +17,7 @@ function Login({setToken}){
 
   const login=async e=>{
     e.preventDefault();
-    const r=await axios.post("http://localhost:5000/api/login",{email,password});
+    const r=await axios.post(`${API}/api/login`,{email,password});
     setToken(r.data.token);
     nav("/");
   };
@@ -99,7 +99,7 @@ function Dashboard({token,setToken}){
     const w=delhiWards.find(x=>x.no==form.wardNo || x.name.toLowerCase()===form.ward.toLowerCase());
     if(!w){setErr("❌ Invalid Ward Number / Name");return;}
 
-    await axios.post("http://localhost:5000/api/readings",{
+    await axios.post(`${API}/api/readings`,{
       wardNo:w.no,
       ward:w.name,
       pm25:+form.pm25,
@@ -221,7 +221,7 @@ export default function App(){
   const [data,setData]=useState([]);
 
   useEffect(()=>{
-    axios.get("http://localhost:5000/api/readings").then(r=>setData(r.data));
+    axios.get(`${API}/api/readings`).then(r=>setData(r.data));
   },[]);
 
   return(
