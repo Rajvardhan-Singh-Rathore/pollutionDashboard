@@ -24,10 +24,12 @@ app.use(
 app.use(express.json());
 
 /* ---------- DB ---------- */
-mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => console.log("Mongo Connected"))
-  .catch(err => console.log(err));
+mongoose.connect(process.env.MONGO_URI, {
+  serverSelectionTimeoutMS: 15000
+})
+.then(() => console.log("Mongo Connected"))
+.catch(err => console.error("Mongo error:", err));
+
 
 /* ---------- AQI HELPERS ---------- */
 function getAQICategory(aqi) {
