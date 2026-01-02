@@ -513,6 +513,7 @@ const chartOptions = {
       center={[28.61, 77.21]}
       zoom={11}
       className="map-box"
+      whenReady={(map) => map.target.invalidateSize()}
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       {filtered.map(r =>
