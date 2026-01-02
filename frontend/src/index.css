@@ -35,7 +35,7 @@ body{
   height:100vh;
   width:100%;
   display:block;
-  overflow:hidden;
+  overflow:visible;
   background:#0e0e0e;
 }
 

@@ -3,7 +3,8 @@
 =========================================== */
 
 .app-wrapper{
-  height:100vh;
+  min-height:100vh;
+  height:auto;
   width:100%;
   display:flex;
   align-items:center;
@@ -43,8 +44,8 @@
 
 .app-wrapper::after{
   background:#1f1f48;
-  bottom:-28%;
-  z-index:0;
+  bottom:-45%;
+  z-index:-1;
 }
 
 /* ---------- BASE ---------- */
@@ -75,8 +76,8 @@ body{
 .glass{
   width:100%;
   max-width:1400px;     /* ✅ DESKTOP WIDTH */
-  height:90vh;
-
+  height:auto;
+  max-height: none;
   padding:2rem;
   border-radius:24px;
 
