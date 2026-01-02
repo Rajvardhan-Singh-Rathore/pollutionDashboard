@@ -37,8 +37,8 @@
 }
 
 .app-wrapper::before{
-  background:#2d2d61;
-  z-index:1;
+  background:rgb(45,45,97,0);
+  z-index:0;
 }
 
 .app-wrapper::after{
