@@ -12,6 +12,12 @@ import delhiWards from "./delhiWards";
 
 /* ---------- LOGIN ---------- */
 function Login({ setToken }) {
+
+  useEffect(() => {
+    document.body.classList.add("login-page");
+    return () => document.body.classList.remove("login-page");
+  }, []);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const nav = useNavigate();
